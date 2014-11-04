@@ -1,0 +1,215 @@
+date: 2014-11-04 19:11:09.739
+argv: D:\Program Files\nodejs\\node.exe D:\Program Files\nodejs\node_modules\hexo\bin\hexo generate
+os: Windows_NT 6.1.7601 win32 ia32
+version:
+  hexo: 2.5.7
+  http_parser: 2.2
+  node: 0.11.13
+  v8: 3.25.30
+  uv: 0.11.25
+  zlib: 1.2.3
+  modules: 14
+  openssl: 1.0.1g
+---
+
+[debug] 19:11:08.837 Config file loaded
+[debug] 19:11:08.839 Version info checked successfully
+[debug] 19:11:08.877 Loading database.
+[debug] 19:11:09.184 Plugin loaded successfully: hexo-generator-everyday
+[debug] 19:11:09.188 Script load successfully: fancybox.js
+[debug] 19:11:09.279 Processed: Gruntfile.js
+[debug] 19:11:09.279 Processed: LICENSE
+[debug] 19:11:09.279 Processed: README.md
+[debug] 19:11:09.279 Processed: package.json
+[debug] 19:11:09.280 Processed: scripts/fancybox.js
+[debug] 19:11:09.294 Processed: source/css/_extend.styl
+[debug] 19:11:09.294 Processed: source/css/_variables.styl
+[debug] 19:11:09.294 Processed: source/css/_partial/archive.styl
+[debug] 19:11:09.294 Processed: source/css/_partial/article.styl
+[debug] 19:11:09.295 Processed: source/css/_partial/comment.styl
+[debug] 19:11:09.295 Processed: source/css/_partial/footer.styl
+[debug] 19:11:09.295 Processed: source/css/_partial/header.styl
+[debug] 19:11:09.295 Processed: source/css/_partial/highlight.styl
+[debug] 19:11:09.295 Processed: source/css/_partial/mobile.styl
+[debug] 19:11:09.295 Processed: source/css/_partial/sidebar-aside.styl
+[debug] 19:11:09.295 Processed: source/css/_partial/sidebar-bottom.styl
+[debug] 19:11:09.295 Processed: source/css/_partial/sidebar.styl
+[debug] 19:11:09.295 Processed: source/css/_util/grid.styl
+[debug] 19:11:09.295 Processed: source/css/_util/mixin.styl
+[debug] 19:11:09.324 Processed: source/js/script.js
+[debug] 19:11:09.325 Processed: source/css/style.styl
+[debug] 19:11:09.325 Processed: source/css/fonts/FontAwesome.otf
+[debug] 19:11:09.326 Processed: source/css/fonts/fontawesome-webfont.eot
+[debug] 19:11:09.326 Processed: source/css/fonts/fontawesome-webfont.ttf
+[debug] 19:11:09.328 Processed: source/css/fonts/fontawesome-webfont.woff
+[debug] 19:11:09.328 Processed: source/css/images/banner.jpg
+[debug] 19:11:09.329 Processed: source/fancybox/blank.gif
+[debug] 19:11:09.330 Processed: source/fancybox/fancybox_loading.gif
+[debug] 19:11:09.331 Processed: source/fancybox/fancybox_loading@2x.gif
+[debug] 19:11:09.332 Processed: source/fancybox/fancybox_overlay.png
+[debug] 19:11:09.332 Processed: source/fancybox/fancybox_sprite.png
+[debug] 19:11:09.335 Processed: source/fancybox/fancybox_sprite@2x.png
+[debug] 19:11:09.335 Processed: _posts/hello-world.md
+[debug] 19:11:09.342 Processed: source/css/fonts/fontawesome-webfont.svg
+[debug] 19:11:09.342 Processed: source/fancybox/jquery.fancybox.css
+[debug] 19:11:09.343 Processed: source/fancybox/jquery.fancybox.js
+[debug] 19:11:09.344 Processed: source/fancybox/jquery.fancybox.pack.js
+[debug] 19:11:09.345 Processed: source/fancybox/helpers/fancybox_buttons.png
+[debug] 19:11:09.346 Processed: source/fancybox/helpers/jquery.fancybox-buttons.css
+[debug] 19:11:09.347 Processed: source/fancybox/helpers/jquery.fancybox-buttons.js
+[debug] 19:11:09.349 Processed: source/fancybox/helpers/jquery.fancybox-media.js
+[debug] 19:11:09.356 Processed: source/fancybox/helpers/jquery.fancybox-thumbs.css
+[debug] 19:11:09.357 Processed: source/fancybox/helpers/jquery.fancybox-thumbs.js
+[debug] 19:11:09.372 Theme config loaded
+[debug] 19:11:09.372 Processed: _config.yml
+[debug] 19:11:09.372 Cache saved
+[debug] 19:11:09.373 Processed: layout/archive.ejs
+[debug] 19:11:09.374 Processed: layout/category.ejs
+[debug] 19:11:09.374 Processed: layout/index.ejs
+[debug] 19:11:09.374 Processed: layout/layout.ejs
+[debug] 19:11:09.375 Processed: layout/page.ejs
+[debug] 19:11:09.375 Processed: layout/post.ejs
+[debug] 19:11:09.375 Processed: layout/tag.ejs
+[debug] 19:11:09.375 Processed: layout/_widget/archive.ejs
+[debug] 19:11:09.375 Processed: layout/_widget/category.ejs
+[debug] 19:11:09.376 Processed: layout/_widget/recent_posts.ejs
+[debug] 19:11:09.376 Processed: layout/_widget/tag.ejs
+[debug] 19:11:09.376 Processed: layout/_widget/tagcloud.ejs
+[debug] 19:11:09.376 Processed: layout/_partial/after-footer.ejs
+[debug] 19:11:09.376 Processed: layout/_partial/archive.ejs
+[debug] 19:11:09.377 Processed: layout/_partial/article.ejs
+[debug] 19:11:09.377 Processed: layout/_partial/footer.ejs
+[debug] 19:11:09.377 Processed: layout/_partial/archive-post.ejs
+[debug] 19:11:09.380 Processed: layout/_partial/head.ejs
+[debug] 19:11:09.381 Processed: layout/_partial/google-analytics.ejs
+[debug] 19:11:09.381 Processed: layout/_partial/header.ejs
+[debug] 19:11:09.381 Processed: layout/_partial/mobile-nav.ejs
+[debug] 19:11:09.381 Processed: layout/_partial/sidebar.ejs
+[debug] 19:11:09.382 Processed: layout/_partial/post/category.ejs
+[debug] 19:11:09.382 Processed: layout/_partial/post/gallery.ejs
+[debug] 19:11:09.383 Processed: layout/_partial/post/date.ejs
+[debug] 19:11:09.383 Processed: layout/_partial/post/tag.ejs
+[debug] 19:11:09.383 Processed: layout/_partial/post/nav.ejs
+[debug] 19:11:09.383 Processed: layout/_partial/post/title.ejs
+[info] 19:11:09.431 Files loaded in 0.242s
+[debug] 19:11:09.464 Render archive: archives/
+[debug] 19:11:09.468 Render archive: archives/2014/
+[debug] 19:11:09.469 Render archive: archives/2014/11/
+[debug] 19:11:09.469 Render index: 
+[debug] 19:11:09.469 Render post: 2014/11/04/hello-world/
+[error] 19:11:09.718 { errno: -4058,
+  code: 'ENOENT',
+  path: 'd:\\github_project\\hexo-generate-ed\\blog\\public\\d:\\github_project\\hexo-generate-ed\\blog\\public\\everyday\\2014\\11',
+  name: 'HexoError',
+  message: 'File generate failed: d:\\github_project\\hexo-generate-ed\\blog\\public\\everyday\\2014\\11\\4.html',
+  stack: undefined }
+[error] 19:11:09.724 { errno: -4058,
+  code: 'ENOENT',
+  path: 'd:\\github_project\\hexo-generate-ed\\blog\\public\\d:\\github_project\\hexo-generate-ed\\blog\\public\\everyday\\2014\\11',
+  name: 'HexoError',
+  message: 'File generate failed: d:\\github_project\\hexo-generate-ed\\blog\\public\\everyday\\2014\\11\\5.html',
+  stack: undefined }
+[create] 19:11:09.728 Public: archives\index.html
+[create] 19:11:09.734 Public: 2014\11\04\hello-world\index.html
+[create] 19:11:09.735 Public: archives\2014\11\index.html
+[create] 19:11:09.738 Public: index.html[debug] 19:11:08.837 Config file loaded
+[debug] 19:11:08.839 Version info checked successfully
+[debug] 19:11:08.877 Loading database.
+[debug] 19:11:09.184 Plugin loaded successfully: hexo-generator-everyday
+[debug] 19:11:09.188 Script load successfully: fancybox.js
+[debug] 19:11:09.279 Processed: Gruntfile.js
+[debug] 19:11:09.279 Processed: LICENSE
+[debug] 19:11:09.279 Processed: README.md
+[debug] 19:11:09.279 Processed: package.json
+[debug] 19:11:09.280 Processed: scripts/fancybox.js
+[debug] 19:11:09.294 Processed: source/css/_extend.styl
+[debug] 19:11:09.294 Processed: source/css/_variables.styl
+[debug] 19:11:09.294 Processed: source/css/_partial/archive.styl
+[debug] 19:11:09.294 Processed: source/css/_partial/article.styl
+[debug] 19:11:09.295 Processed: source/css/_partial/comment.styl
+[debug] 19:11:09.295 Processed: source/css/_partial/footer.styl
+[debug] 19:11:09.295 Processed: source/css/_partial/header.styl
+[debug] 19:11:09.295 Processed: source/css/_partial/highlight.styl
+[debug] 19:11:09.295 Processed: source/css/_partial/mobile.styl
+[debug] 19:11:09.295 Processed: source/css/_partial/sidebar-aside.styl
+[debug] 19:11:09.295 Processed: source/css/_partial/sidebar-bottom.styl
+[debug] 19:11:09.295 Processed: source/css/_partial/sidebar.styl
+[debug] 19:11:09.295 Processed: source/css/_util/grid.styl
+[debug] 19:11:09.295 Processed: source/css/_util/mixin.styl
+[debug] 19:11:09.324 Processed: source/js/script.js
+[debug] 19:11:09.325 Processed: source/css/style.styl
+[debug] 19:11:09.325 Processed: source/css/fonts/FontAwesome.otf
+[debug] 19:11:09.326 Processed: source/css/fonts/fontawesome-webfont.eot
+[debug] 19:11:09.326 Processed: source/css/fonts/fontawesome-webfont.ttf
+[debug] 19:11:09.328 Processed: source/css/fonts/fontawesome-webfont.woff
+[debug] 19:11:09.328 Processed: source/css/images/banner.jpg
+[debug] 19:11:09.329 Processed: source/fancybox/blank.gif
+[debug] 19:11:09.330 Processed: source/fancybox/fancybox_loading.gif
+[debug] 19:11:09.331 Processed: source/fancybox/fancybox_loading@2x.gif
+[debug] 19:11:09.332 Processed: source/fancybox/fancybox_overlay.png
+[debug] 19:11:09.332 Processed: source/fancybox/fancybox_sprite.png
+[debug] 19:11:09.335 Processed: source/fancybox/fancybox_sprite@2x.png
+[debug] 19:11:09.335 Processed: _posts/hello-world.md
+[debug] 19:11:09.342 Processed: source/css/fonts/fontawesome-webfont.svg
+[debug] 19:11:09.342 Processed: source/fancybox/jquery.fancybox.css
+[debug] 19:11:09.343 Processed: source/fancybox/jquery.fancybox.js
+[debug] 19:11:09.344 Processed: source/fancybox/jquery.fancybox.pack.js
+[debug] 19:11:09.345 Processed: source/fancybox/helpers/fancybox_buttons.png
+[debug] 19:11:09.346 Processed: source/fancybox/helpers/jquery.fancybox-buttons.css
+[debug] 19:11:09.347 Processed: source/fancybox/helpers/jquery.fancybox-buttons.js
+[debug] 19:11:09.349 Processed: source/fancybox/helpers/jquery.fancybox-media.js
+[debug] 19:11:09.356 Processed: source/fancybox/helpers/jquery.fancybox-thumbs.css
+[debug] 19:11:09.357 Processed: source/fancybox/helpers/jquery.fancybox-thumbs.js
+[debug] 19:11:09.372 Theme config loaded
+[debug] 19:11:09.372 Processed: _config.yml
+[debug] 19:11:09.372 Cache saved
+[debug] 19:11:09.373 Processed: layout/archive.ejs
+[debug] 19:11:09.374 Processed: layout/category.ejs
+[debug] 19:11:09.374 Processed: layout/index.ejs
+[debug] 19:11:09.374 Processed: layout/layout.ejs
+[debug] 19:11:09.375 Processed: layout/page.ejs
+[debug] 19:11:09.375 Processed: layout/post.ejs
+[debug] 19:11:09.375 Processed: layout/tag.ejs
+[debug] 19:11:09.375 Processed: layout/_widget/archive.ejs
+[debug] 19:11:09.375 Processed: layout/_widget/category.ejs
+[debug] 19:11:09.376 Processed: layout/_widget/recent_posts.ejs
+[debug] 19:11:09.376 Processed: layout/_widget/tag.ejs
+[debug] 19:11:09.376 Processed: layout/_widget/tagcloud.ejs
+[debug] 19:11:09.376 Processed: layout/_partial/after-footer.ejs
+[debug] 19:11:09.376 Processed: layout/_partial/archive.ejs
+[debug] 19:11:09.377 Processed: layout/_partial/article.ejs
+[debug] 19:11:09.377 Processed: layout/_partial/footer.ejs
+[debug] 19:11:09.377 Processed: layout/_partial/archive-post.ejs
+[debug] 19:11:09.380 Processed: layout/_partial/head.ejs
+[debug] 19:11:09.381 Processed: layout/_partial/google-analytics.ejs
+[debug] 19:11:09.381 Processed: layout/_partial/header.ejs
+[debug] 19:11:09.381 Processed: layout/_partial/mobile-nav.ejs
+[debug] 19:11:09.381 Processed: layout/_partial/sidebar.ejs
+[debug] 19:11:09.382 Processed: layout/_partial/post/category.ejs
+[debug] 19:11:09.382 Processed: layout/_partial/post/gallery.ejs
+[debug] 19:11:09.383 Processed: layout/_partial/post/date.ejs
+[debug] 19:11:09.383 Processed: layout/_partial/post/tag.ejs
+[debug] 19:11:09.383 Processed: layout/_partial/post/nav.ejs
+[debug] 19:11:09.383 Processed: layout/_partial/post/title.ejs
+[info] 19:11:09.431 Files loaded in 0.242s
+[debug] 19:11:09.464 Render archive: archives/
+[debug] 19:11:09.468 Render archive: archives/2014/
+[debug] 19:11:09.469 Render archive: archives/2014/11/
+[debug] 19:11:09.469 Render index: 
+[debug] 19:11:09.469 Render post: 2014/11/04/hello-world/
+[error] 19:11:09.718 { errno: -4058,
+  code: 'ENOENT',
+  path: 'd:\\github_project\\hexo-generate-ed\\blog\\public\\d:\\github_project\\hexo-generate-ed\\blog\\public\\everyday\\2014\\11',
+  name: 'HexoError',
+  message: 'File generate failed: d:\\github_project\\hexo-generate-ed\\blog\\public\\everyday\\2014\\11\\4.html',
+  stack: undefined }
+[error] 19:11:09.724 { errno: -4058,
+  code: 'ENOENT',
+  path: 'd:\\github_project\\hexo-generate-ed\\blog\\public\\d:\\github_project\\hexo-generate-ed\\blog\\public\\everyday\\2014\\11',
+  name: 'HexoError',
+  message: 'File generate failed: d:\\github_project\\hexo-generate-ed\\blog\\public\\everyday\\2014\\11\\5.html',
+  stack: undefined }
+[create] 19:11:09.728 Public: archives\index.html
+[create] 19:11:09.734 Public: 2014\11\04\hello-world\index.html
+[create] 19:11:09.735 Public: archives\2014\11\index.html
+[create] 19:11:09.738 Public: index.html
