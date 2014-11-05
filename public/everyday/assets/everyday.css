@@ -1,0 +1,22 @@
+#calendar {
+	background: #000;
+	color: #FFF;
+	font-size: 0.8em;
+}
+#tittle {
+	font-size: 1.4em;
+	padding: 4px 0.55em;
+}
+#days th {
+	font-weight: bold;
+	text-align: center;
+	padding: 4px 0.55em;
+}
+#calendar td {
+	text-align: center;
+	padding: 4px 0.55em;
+}
+#today {
+	color: #F00;
+	font-weight: bold;
+}
