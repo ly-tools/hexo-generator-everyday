@@ -12,11 +12,6 @@ var tplFile = jade.compile(fs.readFileSync(path.join(__dirname, 'everyday.jade')
 	pretty: true
 });
 
-var errorTplFile = jade.compile(fs.readFileSync(path.join(__dirname, '404.jade'), encoding), {
-	filename: path.join(__dirname, '404.jade'),
-	pretty: true
-});
-
 var mdRender = hexo.extend.renderer.get('md', true);
 
 function walk(dir, callback) {
@@ -62,7 +57,6 @@ function everyday(config) {
 	});
 
 	hexo.route.set(path.join(config.path, 'index.html'), tplFile(config));
-	hexo.route.set(path.join(config.path, '404.html'), errorTplFile(config));
 }
 
 module.exports = function(locals, render, callback) {

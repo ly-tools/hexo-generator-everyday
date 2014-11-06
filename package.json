@@ -1,16 +1,30 @@
 {
   "name": "hexo-generator-everyday",
   "version": "0.0.2",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "skyinlayer",
+  "license": "MIT",
   "dependencies": {
     "jade": "^1.7.0",
     "mkdirp": "^0.5.0",
     "yaml": "^0.2.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/LingyuCoder/hexo-generator-everyday.git"
+  },
+  "keywords": [
+    "hexo",
+    "everyday",
+    "generator",
+    "daily"
+  ],
+  "bugs": {
+    "url": "https://github.com/LingyuCoder/hexo-generator-everyday/issues"
+  },
+  "homepage": "https://github.com/LingyuCoder/hexo-generator-everyday"
 }
