@@ -1,282 +1,139 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" ng-app="everydayApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="这里都是日记">
     <meta name="title" content="日记">
-    <link href="undefinedfavicon.png" rel="icon">
-    <link rel="stylesheet" media="screen" href="undefinedassets/everyday.css">
+    <link href="[object global]favicon.png" rel="icon">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
+    <link rel="stylesheet" href="assets/yue.css">
+    <link rel="stylesheet" href="assets/everyday.css">
   </head>
-  <body>
-    <table id="calendar" cellspacing="0">
-      <tr>
-        <th><<</th>
-        <th id="title"></th>
-        <th>>></th>
-      </tr>
-      <tr id="days">
-        <th>日</th>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+  <body ng-controller="everydayCtrl">
+    <div id="calendar" class="calendar">
+      <div class="calendar-header"><span id="prev" ng-click="prevMonth()" class="btn btn-prev"><i class="icon-angle-left"></i></span><span id="next" ng-click="nextMonth()" class="btn btn-next"><i class="icon-angle-right"></i></span><span id="title">{{calendar.year}} 年 {{calendar.month}}</span></div>
+      <table cellspacing="0">
+        <tr class="days">
+          <th>日</th>
+          <th>一</th>
+          <th>二</th>
+          <th>三</th>
+          <th>四</th>
+          <th>五</th>
+          <th>六</th>
         </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr ng-repeat="row in calendar.list track by $index">
+          <td ng-repeat="item in row track by $index" ng-click="jumpTo(item)"> <span ng-class="{active: selected(item)}">{{item}}</span></td>
         </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <th>一</th>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <th>二</th>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <th>三</th>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <th>四</th>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <th>五</th>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <th>六</th>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tr>
-    </table>
+      </table>
+    </div>
+    <div class="box">
+      <div ng-view class="ctn yue"></div>
+    </div>
   </body>
-  <script src="assets/everyday.js"></script>
+  <script src="http://cdn.staticfile.org/angular.js/1.3.0-beta.13/angular.min.js"></script>
+  <script src="http://cdn.staticfile.org/angular.js/1.3.0-beta.13/angular-route.min.js"></script>
+  <!--script(src='assets/everyday.js')-->
+  <script>
+    angular.module('everydayApp', ['ngRoute']).
+    config(function($routeProvider, $httpProvider) {
+      $httpProvider.interceptors.push(function($q, $location) {
+        return {
+         'responseError': function(rejection) {
+            if(rejection.status === 404){
+                $location.path('/404/');
+                return $q.reject(rejection);
+            }
+          }
+        };
+      });
+    
+      $routeProvider.when('/:year/:month/:day', {
+        templateUrl: function(params) {
+          return params.year + '/' + params.month + '/' + params.day + '.html';
+        },
+        controller: 'everydayCtrl'
+      }).when('/404/', {
+        templateUrl: '404.html',
+        controller: 'everydayCtrl'
+      }).otherwise({
+        redirectTo: function() {
+          var today = new Date();
+          return today.getFullYear() + '/' + (today.getMonth() + 1) + '/' + today.getDate();
+        }
+      });
+    }).controller('everydayCtrl', function($scope, $routeParams, $location) {
+      var today = new Date();
+      var calendar = $scope.calendar = {};
+    
+      $scope.jumpTo = function(day) {
+        if(day) {
+          $location.path('/' + calendar.year + '/' + calendar.month + '/' + day);
+        }
+      };
+      $scope.selected = function(curDay) {
+        return $routeParams.year == calendar.year && $routeParams.month == calendar.month && $routeParams.day == curDay;
+      }
+      $scope.prevMonth = function() {
+        var month = calendar.month - 1;
+        var year = calendar.year;
+        if (month === 0) {
+          month += 12;
+          year--;
+        }
+        calendar.month = month;
+        calendar.year = year;
+      }
+      $scope.nextMonth = function() {
+        var month = calendar.month + 1;
+        var year = calendar.year;
+        if (month === 13) {
+          month -= 12;
+          year++;
+        }
+        calendar.month = month;
+        calendar.year = year;
+      }
+    
+      $scope.getFirstDay = function(year, month) { //获取每个月第一天再星期几 
+        var firstDay = new Date(year, month - 1, 1);
+        return firstDay.getDay(); //getDay()方法来获取 
+      }
+    
+      $scope.getMonthLen = function(year, month) { //获取当月总共有多少天 
+        var nextMonth = new Date(year, month, 1); //获取下个月的第一天 
+        nextMonth.setHours(nextMonth.getHours() - 3); //由于获取的天是0时,所以减去3小时则可以得出该月的天数 
+        return nextMonth.getDate(); //返回当天日期 
+      }
+    
+      $scope.$watchGroup(['calendar.year', 'calendar.month'], function(newValues, oldValues, scope) {
+        var year = newValues[0];
+        var month = newValues[1];
+        var monthLen = scope.getMonthLen(year, month);
+        var firstDay = scope.getFirstDay(year, month);
+        var list = scope.calendar.list = [
+          []
+        ];
+    
+        var cur, row, col, i;
+        for (i = firstDay; i--;) {
+          list[0].push(' ');
+        }
+        for (i = 1; i <= monthLen; i++) { //循环写入每天的值进入TABLE中
+          cur = i + firstDay - 1;
+          row = Math.floor(cur / 7);
+          col = cur % 7;
+          list[row] = list[row] || [];
+          list[row].push(i);
+        }
+      });
+    
+      calendar.month = today.getMonth() + 1;
+      calendar.year = today.getFullYear();
+      calendar.day = today.getDate();
+    });
+  </script>
 </html>

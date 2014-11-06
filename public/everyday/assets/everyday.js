@@ -15,12 +15,12 @@ var calendar = {
 	createCalendar: function(form, date) { //创建日历方法 
 		calendar.year = date.getFullYear(); //获得当时的年份,并赋值到calendar属性year中,以便别的方法的调用 
 		calendar.month = date.getMonth(); //跟上面获取年份的目的一样 
-		form.getElementsByTagName('th')[1].innerHTML = calendar.year + '年 ' + (calendar.month + 1) + '月'; //插入年份和月份 
+		document.getElementById('title').innerHTML = calendar.year + '年 ' + (calendar.month + 1) + '月'; //插入年份和月份 
 		calendar.clearCalendar(form); //清空TABLE 
 		var monthLen = calendar.getMonthLen(calendar.year, calendar.month); //获取月份长度 
 		var firstDay = calendar.getFirstDay(calendar.year, calendar.month); //获取月份首天为星期几 
 		for (var i = 1; i <= monthLen; i++) { //循环写入每天的值进入TABLE中 
-			calendar.dayTable[i + firstDay - 1].innerHTML = i; //i为循环值,加上第一天的星期值刚可以对应TABLE位置,但由于数组从0开始算,所以需要减去1 
+			calendar.dayTable[i + firstDay - 1].innerHTML = '<span>' + i + '</span>'; //i为循环值,加上第一天的星期值刚可以对应TABLE位置,但由于数组从0开始算,所以需要减去1 
 			if ((i + firstDay - 2) == new Date().getDate() && calendar.month == new Date().getMonth() && calendar.year == new Date().getFullYear()) { //判断是否是当天 
 				calendar.dayTable[i + firstDay - 1].id = 'today';
 			}
@@ -36,8 +36,8 @@ var calendar = {
 	init: function(form) { //主方法 
 		this.dayTable = form.getElementsByTagName('td');
 		this.createCalendar(form, new Date());
-		var preMon = form.getElementsByTagName('th')[0];
-		var nextMon = form.getElementsByTagName('th')[2];
+		var preMon = document.getElementById('prev');
+		var nextMon = document.getElementById('next');
 		preMon.onclick = function() { //当点击左按钮时,减去一个月,并重绘TABLE 
 			calendar.createCalendar(form, new Date(calendar.year, calendar.month - 1, 1));
 		}
