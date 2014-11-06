@@ -1,6 +1,16 @@
 {
-  "name": "hexo-site",
-  "version": "2.5.7",
-  "private": true,
-  "dependencies": {}
+  "name": "hexo-generator-everyday",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jade": "^1.7.0",
+    "mkdirp": "^0.5.0",
+    "yaml": "^0.2.3"
+  }
 }

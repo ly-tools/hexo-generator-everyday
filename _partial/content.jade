@@ -1,0 +1,7 @@
+div.box
+  div.ctn.yue
+    h1 {{current.year}} 年 {{current.month}} 月 {{current.day}} 日
+    div(ng-hide='loading')
+      div(ng-view ng-hide='notFound')
+      div(ng-show='notFound') 似乎没有这一天的日记o(╯□╰)o
+    div.loading(ng-show='loading')

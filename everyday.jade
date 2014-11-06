@@ -1,0 +1,12 @@
+doctype html
+block vars
+  - var bodyclass = null;
+html(lang='zh-CN', ng-app='everydayApp')
+  head
+    include _partial/head
+  body(ng-controller='everydayCtrl')
+    include _partial/calendar
+    include _partial/content
+  include _partial/script
+  
+    

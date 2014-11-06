@@ -1,0 +1,14 @@
+div#calendar.calendar
+  div.calendar-header
+    span#prev.btn.btn-prev(ng-click='prevMonth()')
+      i.icon-angle-left
+    span#next.btn.btn-next(ng-click='nextMonth()')
+      i.icon-angle-right
+    span#title {{calendar.year}} 年 {{calendar.month}} 月
+  table(cellspacing='0')
+    tr.days
+      each val in ['日', '一', '二', '三', '四', '五', '六']
+        th=val
+    tr(ng-repeat='row in calendar.list track by $index')
+      td(ng-repeat='item in row track by $index' ng-click='jumpTo(item)') 
+        span( ng-class='{active: selected(item)}') {{item}}
