@@ -147,6 +147,12 @@ td:hover > span, td > span.active {
 	border: 2px solid #98cd60;
 	padding: 6px;
 }
+
+td > span.exist {
+	color: #98cd60;
+	font-weight: bolder;
+}
+
 .loading {
 	width: 30px;
 	height: 30px;

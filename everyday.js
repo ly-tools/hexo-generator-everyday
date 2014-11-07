@@ -12,11 +12,6 @@ var tplFile = jade.compile(fs.readFileSync(path.join(__dirname, 'everyday.jade')
 	pretty: true
 });
 
-var errorTplFile = jade.compile(fs.readFileSync(path.join(__dirname, '404.jade'), encoding), {
-	filename: path.join(__dirname, '404.jade'),
-	pretty: true
-});
-
 var mdRender = hexo.extend.renderer.get('md', true);
 
 function walk(dir, callback) {
@@ -39,6 +34,7 @@ function walk(dir, callback) {
 function everyday(config) {
 	var source = path.join(cwd, 'everyday');
 	var assets = path.join(__dirname, 'assets');
+	var exists = {};
 	if (!config.enable) {
 		return;
 	}
@@ -46,11 +42,10 @@ function everyday(config) {
 	walk(source, function(filePath) {
 		var name = path.basename(filePath, '.md');
 		var time = name.split('-');
-		var day = time[2];
 		var destFolder = path.join(config.path, time[0], time[1]);
-		if (!fs.existsSync(destFolder)) {
-			mkdirp.sync(destFolder);
-		}
+		exists[time[0]] = exists[time[0]] || {};
+		exists[time[0]][time[1]] = exists[time[0]][time[1]] || {};
+		exists[time[0]][time[1]][time[2]] = true;
 		hexo.route.set(path.join(destFolder, time[2] + '.html'), mdRender({
 			text: fs.readFileSync(filePath, encoding)
 		}));
@@ -62,22 +57,22 @@ function everyday(config) {
 	});
 
 	hexo.route.set(path.join(config.path, 'index.html'), tplFile(config));
-	hexo.route.set(path.join(config.path, '404.html'), errorTplFile(config));
+	hexo.route.set(path.join(config.path, 'everyday.json'), JSON.stringify(exists));
 }
 
 module.exports = function(locals, render, callback) {
 	var config = hexo.config;
 
-	everyday(_.assign({
+	everyday(_.defaults(config.everyday || {}, {
 		path: 'everyday',
 		enable: true,
-		author: '天镶',
-		description: '这里都是日记',
+		author: 'Your Name',
+		description: 'Code everyday, keep girls away',
 		highlight: {
 			languages: ['javascript', 'css', 'xml', 'markdown'],
 			style: 'github'
 		}
-	}, hexo.config.everyday));
+	}));
 
 	callback();
 };

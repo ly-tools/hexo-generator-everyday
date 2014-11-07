@@ -16,11 +16,13 @@ angular
 			}
 		});
 	})
-	.controller('everydayCtrl', function($scope, $routeParams, $location) {
+	.controller('everydayCtrl', function($scope, $routeParams, $location, $http) {
 		var calendar = $scope.calendar = {};
 		var current = $scope.current = {};
+		var exists = $scope.exists = {};
 		$scope.notFound = false;
 		$scope.loaindg = true;
+
 
 		$scope.$on('$routeChangeSuccess', function() {
 			$scope.loading = false;
@@ -50,6 +52,9 @@ angular
 				$location.path('/' + calendar.year + '/' + calendar.month + '/' + day);
 			}
 		};
+		$scope.exist = function(curDay) {
+			return exists && exists[calendar.year] && exists[calendar.year][calendar.month] && exists[calendar.year][calendar.month][curDay]
+		}
 		$scope.selected = function(curDay) {
 			return current.year == calendar.year && current.month == calendar.month && current.day == curDay;
 		}
@@ -106,6 +111,11 @@ angular
 				list[row].push(i);
 			}
 		});
+
+		$http.get('everyday.json').success(function(data) {
+			exists = data;
+		});
+
 
 		var cur = $location.path().split('/');
 		current.year = calendar.year = cur[1];

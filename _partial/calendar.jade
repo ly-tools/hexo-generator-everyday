@@ -11,4 +11,4 @@ div#calendar.calendar
         th=val
     tr(ng-repeat='row in calendar.list track by $index')
       td(ng-repeat='item in row track by $index' ng-click='jumpTo(item)') 
-        span( ng-class='{active: selected(item)}') {{item}}
+        span( ng-class='{active: selected(item), exist: exist(item)}') {{item}}
