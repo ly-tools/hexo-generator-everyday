@@ -31,16 +31,10 @@ angular
 			current.month = calendar.month = cur[2];
 			current.day = calendar.day = cur[3];
 
-			$scope.notFound = false;
 			var codes = document.getElementsByTagName('code');
 			for (var i = codes.length; i--;) {
 				hljs.highlightBlock(codes[i]);
 			}
-		});
-
-		$scope.$on('$routeChangeError', function() {
-			$scope.notFound = true;
-			$scope.loading = false;
 		});
 
 		$scope.jumpTo = function(day) {
@@ -48,8 +42,14 @@ angular
 				current.year = calendar.year;
 				current.month = calendar.month;
 				current.day = calendar.day = day;
-				$scope.loading = true;
-				$location.path('/' + calendar.year + '/' + calendar.month + '/' + day);
+				
+				if($scope.exist(day)) {
+					$scope.loading = true;
+					$scope.notFound = false;
+					$location.path('/' + calendar.year + '/' + calendar.month + '/' + day);
+				} else {
+					$scope.notFound = true;
+				}
 			}
 		};
 		$scope.exist = function(curDay) {
