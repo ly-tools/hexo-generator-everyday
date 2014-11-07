@@ -55,6 +55,7 @@ angular
 
 			$scope.$on('$routeChangeError', function() {
 				$scope.loading = false;
+				$location.path('/' + current.year + '/' + current.month + '/' + current.day + '/error');
 			});
 
 			$scope.jumpTo = function(day) {

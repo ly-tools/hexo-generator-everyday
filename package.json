@@ -1,13 +1,11 @@
 {
   "name": "hexo-generator-everyday",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": {
-    "name": "skyinlayer"
-  },
+  "author": "skyinlayer",
   "license": "MIT",
   "dependencies": {
     "jade": "^1.7.0",
@@ -29,9 +27,9 @@
     "url": "https://github.com/LingyuCoder/hexo-generator-everyday/issues"
   },
   "homepage": "https://github.com/LingyuCoder/hexo-generator-everyday",
-  "readme": "ERROR: No README data found!",
-  "_id": "hexo-generator-everyday@0.0.6",
   "_shasum": "da07104ddb3593226620ec6c1277b61f5df46f20",
   "_from": "hexo-generator-everyday@0.0.6",
-  "_resolved": "http://registry.npmjs.org/hexo-generator-everyday/-/hexo-generator-everyday-0.0.6.tgz"
+  "_resolved": "http://registry.npmjs.org/hexo-generator-everyday/-/hexo-generator-everyday-0.0.6.tgz",
+  "description": "A hexo generator plugin to write diary",
+  "devDependencies": {}
 }
