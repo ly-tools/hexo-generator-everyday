@@ -30,7 +30,7 @@ everyday:
   path: 'everyday' #日记的路径
   enable: true #是否启用日记
   author: '天镶' #你的昵称
-  description: '天镶的日记 | Code everyday, keep girls away~', #日记页面的描述
+  description: '天镶的日记 | Code everyday, keep girls away~' #日记页面的描述
   highlight: #日记中的markdown代码高亮配置，使用highlight.js
     languages: #需要高亮的语言
       - 'javascript'
